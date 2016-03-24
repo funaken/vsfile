@@ -139,6 +139,11 @@ namespace VSFile
 			public const string CSharp = "FAE04EC0-301F-11D3-BF4B-00C04F79EFBC";
 
 			/// <summary>
+			/// Unity C# project type.
+			/// </summary>
+			public const string CSharpUnity = "439B3A25-B555-B3BC-8667-A09A036AE70C";
+
+			/// <summary>
 			/// Visual F# project type.
 			/// </summary>
 			public const string FSharp = "F2A71F9B-5D33-465A-A702-920D77279786";
@@ -237,6 +242,10 @@ namespace VSFile
 
 						break;
 					case ProjectTypeGuid.CSharp:
+						m_cSharpProjectFiles.Add(new CSharpProjectFile(projectName, path));
+
+						break;
+					case ProjectTypeGuid.CSharpUnity:
 						m_cSharpProjectFiles.Add(new CSharpProjectFile(projectName, path));
 
 						break;
